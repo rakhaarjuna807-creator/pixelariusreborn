@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelariusReborn - Minecraft Java & Bedrock Server</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,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">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Minecraft&family=Poppins:wght@300;400;600;700&display=swap');
+        body { font-family: 'Poppins', sans-serif; background-color: #0f172a; color: white; background-image: radial-gradient(at 80% 0%, hsla(189,100%,56%,0.15) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355,100%,93%,0.15) 0px, transparent 50%); min-height: 100vh; }
+        .minecraft-font { font-family: 'Minecraft', sans-serif; }
+        .server-card { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease; }
+        .server-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); }
+        .gradient-text { background: linear-gradient(90deg, #54DAF4, #19BEFF); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .nav-btn { position: relative; padding: 8px 16px; border-radius: 8px; transition: all 0.3s ease; overflow: hidden; }
+        .nav-btn::before { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #54DAF4, #19BEFF); transition: width 0.3s ease; }
+        .nav-btn:hover::before { width: 100%; }
+        .nav-btn:hover { background: rgba(84, 218, 244, 0.1); }
+        .player-count { animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        .btn-glow { box-shadow: 0 0 15px rgba(59, 130, 246, 0.5); transition: all 0.3s ease; }
+        .btn-glow:hover { box-shadow: 0 0 25px rgba(59, 130, 246, 0.8); }
+        .version-badge { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); }
+        .copy-btn { cursor: pointer; transition: all 0.2s ease; }
+        .copy-btn:hover { background-color: rgba(255, 255, 255, 0.1); }
+        .copy-btn.copied { background-color: #10b981; }
+        .logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 40px; width: auto; border-radius: 8px; }
+    </style>
+</head>
+<body class="flex flex-col">
+    <nav class="py-4 px-6 flex justify-between items-center">
+        <div class="logo-container">
+            <img src="image/logo_new.png" alt="PixelariusReborn Logo" class="logo-img">
+            <span class="text-2xl font-bold gradient-text">PixelariusReborn</span>
+        </div>
+        <div class="hidden md:flex space-x-2">
+            <a href="#home" class="nav-btn hover:text-blue-400 transition"><i class="fas fa-home mr-2"></i> Home</a>
+            <a href="#about" class="nav-btn hover:text-blue-400 transition"><i class="fas fa-info-circle mr-2"></i> About</a>
+            <a href="#join" class="nav-btn hover:text-blue-400 transition"><i class="fas fa-sign-in-alt mr-2"></i> Join</a>
+            <a href="store.html" class="nav-btn hover:text-blue-400 transition"><i class="fas fa-store mr-2"></i> Store</a>
+            <a href="#links" class="nav-btn hover:text-blue-400 transition"><i class="fas fa-link mr-2"></i> Links</a>
+        </div>
+        <button class="md:hidden text-xl"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <section id="home" class="flex-grow flex flex-col items-center justify-center px-6 py-16 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 minecraft-font">Welcome to <span class="gradient-text">PixelariusReborn</span></h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-300">The best server in the world</p>
+            <div class="server-card rounded-xl p-6 mb-8 max-w-md mx-auto">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-semibold">Server Status</h3>
+                    <div class="flex items-center">
+                        <div class="w-3 h-3 rounded-full bg-gray-500 mr-2" id="statusDot"></div>
+                        <span id="statusText">Checking...</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-gray-400">Players Online</p>
+                        <p class="text-3xl font-bold player-count" id="playerCount">Loading...</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-400">Version</p>
+                        <p class="text-xl font-bold">1.21 - 1.21.11</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#join" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold btn-glow transition"><i class="fas fa-play mr-2"></i> Join Now</a>
+                <a href="https://discord.com/invite/46n37UXcMc" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold transition"><i class="fab fa-discord mr-2"></i> Discord</a>
+                <a href="store.html" class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold btn-glow transition"><i class="fas fa-gem mr-2"></i> Visit Store</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 px-6 bg-gray-900/50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center gradient-text">About Our Server</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="server-card p-6 rounded-xl">
+                    <div class="text-blue-400 text-4xl mb-4"><i class="fas fa-globe"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Cross-Platform</h3>
+                    <p class="text-gray-300">Play with friends on both Java and Bedrock editions with our GeyserMC bridge.</p>
+                </div>
+                <div class="server-card p-6 rounded-xl">
+                    <div class="text-green-400 text-4xl mb-4"><i class="fas fa-leaf"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Survival Multiplayer</h3>
+                    <p class="text-gray-300">Vanilla+ survival experience with quality-of-life plugins and a friendly community.</p>
+                </div>
+                <div class="server-card p-6 rounded-xl">
+                    <div class="text-purple-400 text-4xl mb-4"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Active Staff</h3>
+                    <p class="text-gray-300">Our dedicated staff team ensures a safe and enjoyable experience for all players.</p>
+                </div>
+            </div>
+            <div class="mt-12 server-card p-6 rounded-xl">
+                <h3 class="text-2xl font-semibold mb-4">Supported Versions</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="version-badge px-4 py-2 rounded-full">Java 1.21 - 1.21.11</span>
+                    <span class="version-badge px-4 py-2 rounded-full">Bedrock 1.21.x</span>
+                </div>
+                <p class="mt-4 text-gray-300">We regularly update to support the latest stable Minecraft versions while maintaining backwards compatibility.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="join" class="py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center gradient-text">How to Join</h2>
+            <div class="server-card p-8 rounded-xl mb-8">
+                <h3 class="text-2xl font-semibold mb-6">Server Address</h3>
+                <div class="bg-gray-800 p-4 rounded-lg mb-6 flex justify-between items-center">
+                    <code class="text-xl font-mono break-all" id="serverAddress">play.pixelarius.web.id</code>
+                    <button class="copy-btn px-3 py-1 rounded-md text-sm" onclick="copyToClipboard(event)"><i class="fas fa-copy mr-1"></i> Copy</button>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-3 text-blue-400">Java Edition</h4>
+                        <ol class="list-decimal list-inside space-y-2 text-gray-300">
+                            <li>Open Minecraft and select "Multiplayer"</li>
+                            <li>Click "Add Server"</li>
+                            <li>Enter any name and our server address</li>
+                            <li>Click "Done" and join the server!</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-3 text-green-400">Bedrock Edition</h4>
+                        <ol class="list-decimal list-inside space-y-2 text-gray-300">
+                            <li>Go to "Play" and select "Servers"</li>
+                            <li>Scroll down and click "Add Server"</li>
+                            <li>Enter our server address and port 19132</li>
+                            <li>Save and connect to the server!</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="links" class="py-16 px-6 bg-gray-900/50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center gradient-text">Community Links</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="https://chat.whatsapp.com/K9x1mrCfKSWB7c3XkWgPob" target="_blank" class="server-card p-6 rounded-xl hover:bg-green-900/20 transition group">
+                    <div class="flex items-center">
+                        <div class="text-green-500 text-4xl mr-4 group-hover:text-green-400 transition"><i class="fab fa-whatsapp"></i></div>
+                        <div><h3 class="text-xl font-semibold">WhatsApp Group</h3><p class="text-gray-400">Join our community chat</p></div>
+                    </div>
+                </a>
+                <a href="https://discord.com/invite/46n37UXcMc" target="_blank" class="server-card p-6 rounded-xl hover:bg-indigo-900/20 transition group">
+                    <div class="flex items-center">
+                        <div class="text-indigo-500 text-4xl mr-4 group-hover:text-indigo-400 transition"><i class="fab fa-discord"></i></div>
+                        <div><h3 class="text-xl font-semibold">Discord Server</h3><p class="text-gray-400">Get support and updates</p></div>
+                    </div>
+                </a>
+                <a href="https://minecraft-mp.com/server/343896/vote/" target="_blank" class="server-card p-6 rounded-xl hover:bg-orange-900/20 transition group">
+                    <div class="flex items-center">
+                        <div class="text-orange-500 text-4xl mr-4 group-hover:text-orange-400 transition"><i class="fas fa-vote-yea"></i></div>
+                        <div><h3 class="text-xl font-semibold">Vote for Us</h3><p class="text-gray-400">Support our server!</p></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 px-6 text-center text-gray-400">
+        <p>© Dev Web By RmaxOfficial</p>
+        <p>© 2025 PixelariusReborn SMP - All Rights Reserved</p>
+        <p class="mt-2 text-sm">Not affiliated with Mojang or Microsoft</p>
+    </footer>
+
+    <script>
+        async function fetchPlayerCount() {
+            try {
+                const response = await fetch('https://api.mcsrvstat.us/2/play.pixelarius.web.id:25565');
+                const data = await response.json();
+                if (data.online) {
+                    document.getElementById('playerCount').textContent = data.players ? data.players.online : '0';
+                    document.getElementById('statusDot').className = 'w-3 h-3 rounded-full bg-green-500 mr-2';
+                    document.getElementById('statusText').textContent = 'Online';
+                } else {
+                    document.getElementById('playerCount').textContent = 'Offline';
+                    document.getElementById('statusDot').className = 'w-3 h-3 rounded-full bg-red-500 mr-2';
+                    document.getElementById('statusText').textContent = 'Offline';
+                    document.querySelector('.player-count').style.animation = 'none';
+                }
+            } catch (error) {
+                document.getElementById('playerCount').textContent = 'Error';
+                document.getElementById('statusDot').className = 'w-3 h-3 rounded-full bg-red-500 mr-2';
+                document.getElementById('statusText').textContent = 'Error';
+            }
+        }
+
+        function copyToClipboard(event) {
+            const copyBtn = event.currentTarget;
+            const serverAddress = document.getElementById('serverAddress').textContent.trim();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(serverAddress).then(() => {
+                    copyBtn.innerHTML = '<i class="fas fa-check mr-1"></i> Copied!';
+                    copyBtn.classList.add('copied');
+                    setTimeout(() => { copyBtn.innerHTML = '<i class="fas fa-copy mr-1"></i> Copy'; copyBtn.classList.remove('copied'); }, 2000);
+                });
+            }
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        fetchPlayerCount();
+        setInterval(fetchPlayerCount, 30000);
+    </script>
+</body>
+</html>

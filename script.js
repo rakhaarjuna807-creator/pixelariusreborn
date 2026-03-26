@@ -1,0 +1,1 @@
+console.log('Sekai SMP Website Loaded');

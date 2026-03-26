@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelariusReborn - Store</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,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">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Minecraft&family=Poppins:wght@300;400;600;700&display=swap');
+        body { font-family: 'Poppins', sans-serif; background-color: #0f172a; color: white; background-image: radial-gradient(at 80% 0%, hsla(189,100%,56%,0.15) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355,100%,93%,0.15) 0px, transparent 50%); min-height: 100vh; }
+        .minecraft-font { font-family: 'Minecraft', sans-serif; }
+        .server-card { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease; }
+        .gradient-text { background: linear-gradient(90deg, #54DAF4, #19BEFF); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .nav-btn { position: relative; padding: 8px 16px; border-radius: 8px; transition: all 0.3s ease; overflow: hidden; }
+        .nav-btn::before { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #54DAF4, #19BEFF); transition: width 0.3s ease; }
+        .nav-btn:hover::before { width: 100%; }
+        .nav-btn:hover { background: rgba(84, 218, 244, 0.1); }
+        .logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 40px; width: auto; border-radius: 8px; }
+
+        .store-item { transition: all 0.3s ease; border: 2px solid transparent; }
+        .store-item:hover { transform: translateY(-5px); border-color: rgba(84, 218, 244, 0.5); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+
+        /* Rank Colors */
+        .rank-vip { background: linear-gradient(135deg, rgba(255,215,0,0.12), rgba(255,215,0,0.05)); border: 1px solid rgba(255,215,0,0.4); }
+        .rank-vip-plus { background: linear-gradient(135deg, rgba(255,165,0,0.12), rgba(255,165,0,0.05)); border: 1px solid rgba(255,165,0,0.4); }
+        .rank-mega-vip { background: linear-gradient(135deg, rgba(147,112,219,0.15), rgba(147,112,219,0.05)); border: 1px solid rgba(147,112,219,0.4); }
+        .rank-ultra-vip { background: linear-gradient(135deg, rgba(84,218,244,0.15), rgba(84,218,244,0.05)); border: 1px solid rgba(84,218,244,0.4); }
+        .rank-legend { background: linear-gradient(135deg, rgba(255,69,0,0.15), rgba(255,69,0,0.05)); border: 1px solid rgba(255,69,0,0.4); }
+        .rank-hero { background: linear-gradient(135deg, rgba(57,255,20,0.15), rgba(57,255,20,0.05)); border: 2px solid rgba(57,255,20,0.5); }
+        .coins-item { background: linear-gradient(135deg, rgba(100,149,237,0.12), rgba(100,149,237,0.05)); border: 1px solid rgba(100,149,237,0.3); }
+
+        .popular-badge { position: absolute; top: -10px; right: 20px; background: #ff4757; color: white; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        .store-tab { cursor: pointer; padding: 10px 20px; border-radius: 8px 8px 0 0; transition: all 0.3s ease; }
+        .store-tab.active { background: rgba(84, 218, 244, 0.2); border-bottom: 3px solid #54DAF4; }
+
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center; }
+        .modal-content { background: #1e293b; border-radius: 12px; max-width: 500px; width: 90%; max-height: 80vh; overflow-y: auto; padding: 30px; position: relative; animation: modalFadeIn 0.3s ease; }
+        @keyframes modalFadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        .close-modal { position: absolute; top: 15px; right: 15px; font-size: 24px; cursor: pointer; color: #94a3b8; transition: color 0.2s ease; }
+        .close-modal:hover { color: white; }
+        .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 15px; }
+        .feature-item { background: rgba(255, 255, 255, 0.05); padding: 8px; border-radius: 6px; font-size: 14px; }
+        .pts-badge { display: inline-block; background: rgba(255,215,0,0.15); color: #FFD700; border: 1px solid rgba(255,215,0,0.3); padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-bottom: 4px; }
+    </style>
+</head>
+<body class="flex flex-col">
+    <nav class="py-4 px-6 flex justify-between items-center">
+        <div class="logo-container">
+            <img src="image/logo_new.png" alt="PixelariusReborn Logo" class="logo-img">
+            <span class="text-2xl font-bold gradient-text">PixelariusReborn Store</span>
+        </div>
+        <div class="hidden md:flex space-x-2">
+            <a href="index.html" class="nav-btn hover:text-blue-400 transition"><i class="fas fa-home mr-2"></i> Back to Home</a>
+        </div>
+        <button class="md:hidden text-xl"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <section id="store" class="py-16 px-6 bg-gray-800/50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center gradient-text">Server Store</h2>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+                Dukung server kami dan dapatkan keuntungan yang luar biasa! Semua pembelian membantu agar server tetap berjalan dan menyediakan fitur-fitur baru.
+            </p>
+
+            <div class="flex justify-center mb-8 border-b border-gray-700">
+                <button class="store-tab active" data-tab="ranks">Ranks</button>
+                <button class="store-tab" data-tab="coins">Coins</button>
+            </div>
+
+            <!-- Ranks Tab -->
+            <div id="ranks-tab" class="store-tab-content">
+                <h3 class="text-2xl font-semibold mb-6 text-center">Server Ranks</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+
+                    <!-- VIP -->
+                    <div class="store-item rank-vip p-6 rounded-xl relative">
+                        <h3 class="text-xl font-bold mb-1" style="color:#FFD700;">VIP</h3>
+                        <div class="pts-badge mb-2">6.000 Points</div>
+                        <p class="text-gray-400 mb-3 text-sm">Rank pertama dengan fitur dasar premium</p>
+                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>5.000</span></div>
+                        <div class="flex space-x-2 mb-2">
+                            <button class="flex-1 bg-yellow-600 hover:bg-yellow-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20VIP%20Rank%20seharga%20Rp5.000', '_blank')">
+                                <i class="fas fa-shopping-cart mr-2"></i> Buy Now
+                            </button>
+                            <button class="flex-1 bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-lg font-semibold transition benefit-btn" data-rank="vip">
+                                <i class="fas fa-info-circle mr-2"></i> Info
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- VIP+ -->
+                    <div class="store-item rank-vip-plus p-6 rounded-xl relative">
+                        <div class="popular-badge">POPULER</div>
+                        <h3 class="text-xl font-bold mb-1" style="color:#FFA500;">VIP+</h3>
+                        <div class="pts-badge mb-2" style="background:rgba(255,165,0,0.15);color:#FFA500;border-color:rgba(255,165,0,0.3);">12.000 Points</div>
+                        <p class="text-gray-400 mb-3 text-sm">Fitur kumulatif VIP + E-Chest, Color Nick</p>
+                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>10.000</span></div>
+                        <div class="flex space-x-2 mb-2">
+                            <button class="flex-1 bg-orange-600 hover:bg-orange-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20VIP%2B%20Rank%20seharga%20Rp10.000', '_blank')">
+                                <i class="fas fa-shopping-cart mr-2"></i> Buy Now
+                            </button>
+                            <button class="flex-1 bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-lg font-semibold transition benefit-btn" data-rank="vip_plus">
+                                <i class="fas fa-info-circle mr-2"></i> Info
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Mega VIP -->
+                    <div class="store-item rank-mega-vip p-6 rounded-xl relative">
+                        <h3 class="text-xl font-bold mb-1" style="color:#9370DB;">Mega VIP</h3>
+                        <div class="pts-badge mb-2" style="background:rgba(147,112,219,0.15);color:#9370DB;border-color:rgba(147,112,219,0.3);">25.000 Points</div>
+                        <p class="text-gray-400 mb-3 text-sm">FLY, /repair all + semua fitur sebelumnya</p>
+                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>21.000</span></div>
+                        <div class="flex space-x-2 mb-2">
+                            <button class="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20Mega%20VIP%20Rank%20seharga%20Rp21.000', '_blank')">
+                                <i class="fas fa-shopping-cart mr-2"></i> Buy Now
+                            </button>
+                            <button class="flex-1 bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-lg font-semibold transition benefit-btn" data-rank="mega_vip">
+                                <i class="fas fa-info-circle mr-2"></i> Info
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Ultra VIP -->
+                    <div class="store-item rank-ultra-vip p-6 rounded-xl relative">
+                        <h3 class="text-xl font-bold mb-1" style="color:#54DAF4;">Ultra VIP</h3>
+                        <div class="pts-badge mb-2" style="background:rgba(84,218,244,0.15);color:#54DAF4;border-color:rgba(84,218,244,0.3);">45.000 Points</div>
+                        <p class="text-gray-400 mb-3 text-sm">25 SetHome, Kit Ultra + semua fitur sebelumnya</p>
+                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>37.500</span></div>
+                        <div class="flex space-x-2 mb-2">
+                            <button class="flex-1 bg-cyan-600 hover:bg-cyan-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20Ultra%20VIP%20Rank%20seharga%20Rp37.500', '_blank')">
+                                <i class="fas fa-shopping-cart mr-2"></i> Buy Now
+                            </button>
+                            <button class="flex-1 bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-lg font-semibold transition benefit-btn" data-rank="ultra_vip">
+                                <i class="fas fa-info-circle mr-2"></i> Info
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Legend -->
+                    <div class="store-item rank-legend p-6 rounded-xl relative">
+                        <h3 class="text-xl font-bold mb-1" style="color:#FF4500;">Legend</h3>
+                        <div class="pts-badge mb-2" style="background:rgba(255,69,0,0.15);color:#FF4500;border-color:rgba(255,69,0,0.3);">75.000 Points</div>
+                        <p class="text-gray-400 mb-3 text-sm">/heal, Kit Legend + semua fitur sebelumnya</p>
+                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>62.500</span></div>
+                        <div class="flex space-x-2 mb-2">
+                            <button class="flex-1 bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20Legend%20Rank%20seharga%20Rp62.500', '_blank')">
+                                <i class="fas fa-shopping-cart mr-2"></i> Buy Now
+                            </button>
+                            <button class="flex-1 bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-lg font-semibold transition benefit-btn" data-rank="legend">
+                                <i class="fas fa-info-circle mr-2"></i> Info
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Hero -->
+                    <div class="store-item rank-hero p-6 rounded-xl relative">
+                        <div class="popular-badge" style="background: linear-gradient(90deg,#39ff14,#00cc00);">TOP RANK</div>
+                        <h3 class="text-xl font-bold mb-1" style="color:#39FF14;">Hero</h3>
+                        <div class="pts-badge mb-2" style="background:rgba(57,255,20,0.15);color:#39FF14;border-color:rgba(57,255,20,0.3);">120.000 Points</div>
+                        <p class="text-gray-400 mb-3 text-sm">SERVER PASS, Kit Hero + semua fitur sebelumnya</p>
+                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>100.000</span></div>
+                        <div class="flex space-x-2 mb-2">
+                            <button class="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20Hero%20Rank%20seharga%20Rp100.000', '_blank')">
+                                <i class="fas fa-shopping-cart mr-2"></i> Buy Now
+                            </button>
+                            <button class="flex-1 bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-lg font-semibold transition benefit-btn" data-rank="hero">
+                                <i class="fas fa-info-circle mr-2"></i> Info
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Coins Tab -->
+            <!-- Harga: Rp 1.200 per 1.000 coins -->
+            <div id="coins-tab" class="store-tab-content hidden">
+                <h3 class="text-2xl font-semibold mb-2 text-center">Server Coins</h3>
+                <p class="text-center text-gray-400 mb-8">Harga: <span class="text-cyan-400 font-bold">Rp 1.200</span> per 1.000 Coins</p>
+                <div class="grid md:grid-cols-3 gap-6">
+
+                    <!-- 5.000 Coins = Rp6.000 -->
+                    <div class="store-item coins-item p-6 rounded-xl relative">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-coins text-yellow-400 text-3xl mr-3"></i>
+                            <h3 class="text-xl font-bold">5.000 Coins</h3>
+                        </div>
+                        <p class="text-gray-400 mb-4">Paket starter</p>
+                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>6.000</span></div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%205.000%20Coins%20seharga%20Rp6.000', '_blank')">
+                            <i class="fas fa-shopping-cart mr-2"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <!-- 10.000 Coins = Rp12.000 -->
+                    <div class="store-item coins-item p-6 rounded-xl relative">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-coins text-yellow-400 text-3xl mr-3"></i>
+                            <h3 class="text-xl font-bold">10.000 Coins</h3>
+                        </div>
+                        <p class="text-gray-400 mb-4">Paket pemula</p>
+                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>12.000</span></div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%2010.000%20Coins%20seharga%20Rp12.000', '_blank')">
+                            <i class="fas fa-shopping-cart mr-2"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <!-- 25.000 Coins = Rp30.000 -->
+                    <div class="store-item coins-item p-6 rounded-xl relative">
+                        <div class="popular-badge">POPULER</div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-coins text-yellow-400 text-3xl mr-3"></i>
+                            <h3 class="text-xl font-bold">25.000 Coins</h3>
+                        </div>
+                        <p class="text-gray-400 mb-4">Nilai terbaik untuk pemula</p>
+                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>30.000</span></div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%2025.000%20Coins%20seharga%20Rp30.000', '_blank')">
+                            <i class="fas fa-shopping-cart mr-2"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <!-- 50.000 Coins = Rp60.000 -->
+                    <div class="store-item coins-item p-6 rounded-xl relative">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-coins text-yellow-400 text-3xl mr-3"></i>
+                            <h3 class="text-xl font-bold">50.000 Coins</h3>
+                        </div>
+                        <p class="text-gray-400 mb-4">Paket menengah</p>
+                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>60.000</span></div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%2050.000%20Coins%20seharga%20Rp60.000', '_blank')">
+                            <i class="fas fa-shopping-cart mr-2"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <!-- 100.000 Coins = Rp120.000 -->
+                    <div class="store-item coins-item p-6 rounded-xl relative">
+                        <div class="popular-badge" style="background:#f59e0b;">BEST VALUE</div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-coins text-yellow-400 text-3xl mr-3"></i>
+                            <h3 class="text-xl font-bold">100.000 Coins</h3>
+                        </div>
+                        <p class="text-gray-400 mb-4">Untuk pemain serius</p>
+                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>120.000</span></div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20100.000%20Coins%20seharga%20Rp120.000', '_blank')">
+                            <i class="fas fa-shopping-cart mr-2"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <!-- 250.000 Coins = Rp300.000 -->
+                    <div class="store-item coins-item p-6 rounded-xl relative">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-coins text-yellow-400 text-3xl mr-3"></i>
+                            <h3 class="text-xl font-bold">250.000 Coins</h3>
+                        </div>
+                        <p class="text-gray-400 mb-4">Paket ultimate</p>
+                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>300.000</span></div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20250.000%20Coins%20seharga%20Rp300.000', '_blank')">
+                            <i class="fas fa-shopping-cart mr-2"></i> Buy Now
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefit Modal -->
+    <div class="modal" id="benefitModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeBenefitModal()">&times;</span>
+            <h3 class="text-2xl font-bold mb-1" id="benefitModalTitle">Rank Benefits</h3>
+            <div class="pts-badge mb-4" id="modalPtsBadge"></div>
+            <div class="mb-4">
+                <h4 class="text-lg font-semibold mb-2 text-blue-400">✨ Fitur Utama (Kumulatif):</h4>
+                <div class="features-grid" id="featuresGrid"></div>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg mb-6">
+                <h4 class="text-lg font-semibold mb-2 text-yellow-400">💰 Harga:</h4>
+                <p class="text-gray-300" id="bonusContent"></p>
+            </div>
+            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition" onclick="closeBenefitModal()">
+                <i class="fas fa-check mr-2"></i> Mengerti!
+            </button>
+        </div>
+    </div>
+
+    <footer class="py-8 px-6 text-center text-gray-400">
+        <p>© Dev Web By RmaxOfficial</p>
+        <p>© 2025 PixelariusReborn SMP - All Rights Reserved</p>
+        <p class="mt-2 text-sm">Not affiliated with Mojang or Microsoft</p>
+    </footer>
+
+    <script>
+        const rankData = {
+            'vip': {
+                title: 'VIP',
+                points: '6.000 Points',
+                color: '#FFD700',
+                features: ['/anvil', '/feed', 'Kit VIP'],
+                price: 'Rp 5.000'
+            },
+            'vip_plus': {
+                title: 'VIP+',
+                points: '12.000 Points',
+                color: '#FFA500',
+                features: ['/anvil', '/feed', 'Kit VIP', 'E-Chest', 'Color Nick', 'Kit VIP+'],
+                price: 'Rp 10.000'
+            },
+            'mega_vip': {
+                title: 'Mega VIP',
+                points: '25.000 Points',
+                color: '#9370DB',
+                features: ['/anvil', '/feed', 'E-Chest', 'Color Nick', 'FLY', '/repair all', 'Kit Mega'],
+                price: 'Rp 21.000'
+            },
+            'ultra_vip': {
+                title: 'Ultra VIP',
+                points: '45.000 Points',
+                color: '#54DAF4',
+                features: ['/anvil', '/feed', 'E-Chest', 'Color Nick', 'FLY', '/repair all', '25 SetHome', 'Kit Ultra'],
+                price: 'Rp 37.500'
+            },
+            'legend': {
+                title: 'Legend',
+                points: '75.000 Points',
+                color: '#FF4500',
+                features: ['/anvil', '/feed', 'E-Chest', 'Color Nick', 'FLY', '/repair all', '25 SetHome', '/heal', 'Kit Legend'],
+                price: 'Rp 62.500'
+            },
+            'hero': {
+                title: 'Hero',
+                points: '120.000 Points',
+                color: '#39FF14',
+                features: ['/anvil', '/feed', 'E-Chest', 'Color Nick', 'FLY', '/repair all', '25 SetHome', '/heal', 'SERVER PASS', 'Kit Hero'],
+                price: 'Rp 100.000'
+            }
+        };
+
+        document.querySelectorAll('.store-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.store-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                document.querySelectorAll('.store-tab-content').forEach(c => c.classList.add('hidden'));
+                const tabId = this.getAttribute('data-tab') + '-tab';
+                document.getElementById(tabId).classList.remove('hidden');
+            });
+        });
+
+        document.querySelectorAll('.benefit-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const rank = this.getAttribute('data-rank');
+                const data = rankData[rank];
+                if (!data) return;
+
+                document.getElementById('benefitModalTitle').textContent = data.title + ' Rank Benefits';
+                document.getElementById('benefitModalTitle').style.color = data.color;
+                const ptsBadge = document.getElementById('modalPtsBadge');
+                ptsBadge.textContent = data.points;
+                ptsBadge.style.color = data.color;
+
+                const grid = document.getElementById('featuresGrid');
+                grid.innerHTML = '';
+                data.features.forEach(f => {
+                    const el = document.createElement('div');
+                    el.className = 'feature-item';
+                    el.innerHTML = `<i class="fas fa-check text-green-400 mr-2"></i>${f}`;
+                    grid.appendChild(el);
+                });
+
+                document.getElementById('bonusContent').textContent = data.price + ' (atau ' + data.points + ')';
+                document.getElementById('benefitModal').style.display = 'flex';
+            });
+        });
+
+        function closeBenefitModal() {
+            document.getElementById('benefitModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('benefitModal')) closeBenefitModal();
+        };
+    </script>
+</body>
+</html>
