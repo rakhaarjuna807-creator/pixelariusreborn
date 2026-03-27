@@ -11,39 +11,44 @@
         @import url('https://fonts.googleapis.com/css2?family=Minecraft&family=Poppins:wght@300;400;600;700&display=swap');
         body { font-family: 'Poppins', sans-serif; background-color: #0f172a; color: white; background-image: radial-gradient(at 80% 0%, hsla(189,100%,56%,0.15) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355,100%,93%,0.15) 0px, transparent 50%); min-height: 100vh; }
         .minecraft-font { font-family: 'Minecraft', sans-serif; }
-        .server-card { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease; }
+        .server-card { background: rgba(15,23,42,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease; }
         .gradient-text { background: linear-gradient(90deg, #54DAF4, #19BEFF); -webkit-background-clip: text; background-clip: text; color: transparent; }
         .nav-btn { position: relative; padding: 8px 16px; border-radius: 8px; transition: all 0.3s ease; overflow: hidden; }
         .nav-btn::before { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #54DAF4, #19BEFF); transition: width 0.3s ease; }
         .nav-btn:hover::before { width: 100%; }
-        .nav-btn:hover { background: rgba(84, 218, 244, 0.1); }
+        .nav-btn:hover { background: rgba(84,218,244,0.1); }
         .logo-container { display: flex; align-items: center; gap: 12px; }
         .logo-img { height: 40px; width: auto; border-radius: 8px; }
 
-        .store-item { transition: all 0.3s ease; border: 2px solid transparent; }
-        .store-item:hover { transform: translateY(-5px); border-color: rgba(84, 218, 244, 0.5); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+        .store-item { transition: all 0.3s ease; }
+        .store-item:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
 
         /* Rank Colors */
-        .rank-vip { background: linear-gradient(135deg, rgba(255,215,0,0.12), rgba(255,215,0,0.05)); border: 1px solid rgba(255,215,0,0.4); }
-        .rank-vip-plus { background: linear-gradient(135deg, rgba(255,165,0,0.12), rgba(255,165,0,0.05)); border: 1px solid rgba(255,165,0,0.4); }
-        .rank-mega-vip { background: linear-gradient(135deg, rgba(147,112,219,0.15), rgba(147,112,219,0.05)); border: 1px solid rgba(147,112,219,0.4); }
-        .rank-ultra-vip { background: linear-gradient(135deg, rgba(84,218,244,0.15), rgba(84,218,244,0.05)); border: 1px solid rgba(84,218,244,0.4); }
-        .rank-legend { background: linear-gradient(135deg, rgba(255,69,0,0.15), rgba(255,69,0,0.05)); border: 1px solid rgba(255,69,0,0.4); }
-        .rank-hero { background: linear-gradient(135deg, rgba(57,255,20,0.15), rgba(57,255,20,0.05)); border: 2px solid rgba(57,255,20,0.5); }
-        .coins-item { background: linear-gradient(135deg, rgba(100,149,237,0.12), rgba(100,149,237,0.05)); border: 1px solid rgba(100,149,237,0.3); }
+        .rank-vip       { background: linear-gradient(135deg, rgba(255,215,0,0.12), rgba(255,215,0,0.03)); border: 1px solid rgba(255,215,0,0.4); }
+        .rank-vip-plus  { background: linear-gradient(135deg, rgba(255,165,0,0.12), rgba(255,165,0,0.03)); border: 1px solid rgba(255,165,0,0.4); }
+        .rank-mega-vip  { background: linear-gradient(135deg, rgba(147,112,219,0.15), rgba(147,112,219,0.03)); border: 1px solid rgba(147,112,219,0.4); }
+        .rank-ultra-vip { background: linear-gradient(135deg, rgba(84,218,244,0.15), rgba(84,218,244,0.03)); border: 1px solid rgba(84,218,244,0.4); }
+        .rank-legend    { background: linear-gradient(135deg, rgba(255,69,0,0.15), rgba(255,69,0,0.03)); border: 1px solid rgba(255,69,0,0.4); }
+        .rank-hero      { background: linear-gradient(135deg, rgba(57,255,20,0.15), rgba(57,255,20,0.03)); border: 2px solid rgba(57,255,20,0.5); }
+        .coins-item     { background: linear-gradient(135deg, rgba(100,149,237,0.12), rgba(100,149,237,0.03)); border: 1px solid rgba(100,149,237,0.3); }
+        .coins-item-bonus { background: linear-gradient(135deg, rgba(251,191,36,0.12), rgba(251,191,36,0.03)); border: 1px solid rgba(251,191,36,0.35); }
 
-        .popular-badge { position: absolute; top: -10px; right: 20px; background: #ff4757; color: white; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        .popular-badge { position: absolute; top: -10px; right: 16px; color: white; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: bold; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+
         .store-tab { cursor: pointer; padding: 10px 20px; border-radius: 8px 8px 0 0; transition: all 0.3s ease; }
-        .store-tab.active { background: rgba(84, 218, 244, 0.2); border-bottom: 3px solid #54DAF4; }
+        .store-tab.active { background: rgba(84,218,244,0.2); border-bottom: 3px solid #54DAF4; }
 
-        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center; }
-        .modal-content { background: #1e293b; border-radius: 12px; max-width: 500px; width: 90%; max-height: 80vh; overflow-y: auto; padding: 30px; position: relative; animation: modalFadeIn 0.3s ease; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 1000; justify-content: center; align-items: center; }
+        .modal-content { background: #1e293b; border-radius: 14px; max-width: 480px; width: 90%; max-height: 80vh; overflow-y: auto; padding: 28px; position: relative; animation: modalFadeIn 0.3s ease; border: 1px solid rgba(255,255,255,0.08); }
         @keyframes modalFadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-        .close-modal { position: absolute; top: 15px; right: 15px; font-size: 24px; cursor: pointer; color: #94a3b8; transition: color 0.2s ease; }
+        .close-modal { position: absolute; top: 14px; right: 16px; font-size: 22px; cursor: pointer; color: #94a3b8; transition: color 0.2s; }
         .close-modal:hover { color: white; }
-        .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 15px; }
-        .feature-item { background: rgba(255, 255, 255, 0.05); padding: 8px; border-radius: 6px; font-size: 14px; }
-        .pts-badge { display: inline-block; background: rgba(255,215,0,0.15); color: #FFD700; border: 1px solid rgba(255,215,0,0.3); padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-bottom: 4px; }
+        .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 14px; }
+        .feature-item { background: rgba(255,255,255,0.05); padding: 8px 10px; border-radius: 7px; font-size: 13px; display: flex; align-items: center; gap: 6px; }
+        .coins-badge { display: inline-block; background: rgba(251,191,36,0.15); color: #FCD34D; border: 1px solid rgba(251,191,36,0.35); padding: 2px 9px; border-radius: 5px; font-size: 12px; font-weight: 600; margin-bottom: 6px; }
+        .bonus-tag { display: inline-block; background: rgba(34,197,94,0.2); color: #4ade80; border: 1px solid rgba(34,197,94,0.35); padding: 1px 7px; border-radius: 4px; font-size: 11px; font-weight: 700; margin-left: 6px; }
+        .rank-price-tag { display: inline-block; background: rgba(84,218,244,0.15); color: #54DAF4; border: 1px solid rgba(84,218,244,0.3); padding: 2px 9px; border-radius: 5px; font-size: 12px; font-weight: 600; margin-bottom: 6px; }
+        .section-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #94a3b8; margin-bottom: 10px; }
     </style>
 </head>
 <body class="flex flex-col">
@@ -58,213 +63,295 @@
         <button class="md:hidden text-xl"><i class="fas fa-bars"></i></button>
     </nav>
 
-    <section id="store" class="py-16 px-6 bg-gray-800/50">
+    <section id="store" class="py-14 px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center gradient-text">Server Store</h2>
-            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
-                Dukung server kami dan dapatkan keuntungan yang luar biasa! Semua pembelian membantu agar server tetap berjalan dan menyediakan fitur-fitur baru.
+            <h2 class="text-3xl md:text-4xl font-bold mb-3 text-center gradient-text">Server Store</h2>
+            <p class="text-center text-gray-400 mb-10 max-w-2xl mx-auto">
+                Dukung server kami dan dapatkan keuntungan yang luar biasa! Semua pembelian membantu agar server tetap berjalan.
             </p>
 
             <div class="flex justify-center mb-8 border-b border-gray-700">
-                <button class="store-tab active" data-tab="ranks">Ranks</button>
-                <button class="store-tab" data-tab="coins">Coins</button>
+                <button class="store-tab active" data-tab="coins">💰 Coins</button>
+                <button class="store-tab" data-tab="ranks">👑 Ranks</button>
             </div>
 
-            <!-- Ranks Tab -->
-            <div id="ranks-tab" class="store-tab-content">
-                <h3 class="text-2xl font-semibold mb-6 text-center">Server Ranks</h3>
-                <div class="grid md:grid-cols-3 gap-6">
+            <!-- ═══════════════════ COINS TAB ═══════════════════ -->
+            <div id="coins-tab" class="store-tab-content">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-semibold mb-2">💰 Paket Top-Up Coins</h3>
+                    <p class="text-gray-400 text-sm">Rp1.000 = 1.000 Coins &nbsp;•&nbsp; Beli banyak, bonus koin melimpah!</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-5">
+
+                    <!-- Rp1.000 -->
+                    <div class="store-item coins-item p-5 rounded-xl relative">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="fas fa-coins text-yellow-400 text-2xl"></i>
+                            <div>
+                                <h3 class="text-lg font-bold">1.000 Coins</h3>
+                                <p class="text-gray-400 text-xs">Starter pack</p>
+                            </div>
+                        </div>
+                        <div class="text-2xl font-bold mb-1 text-white">Rp<span>1.000</span></div>
+                        <p class="text-gray-500 text-xs mb-4">Tanpa bonus</p>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition text-sm" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20top-up%201.000%20Coins%20seharga%20Rp1.000', '_blank')">
+                            <i class="fas fa-shopping-cart mr-1"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <!-- Rp5.000 -->
+                    <div class="store-item coins-item-bonus p-5 rounded-xl relative">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="fas fa-coins text-yellow-400 text-2xl"></i>
+                            <div>
+                                <h3 class="text-lg font-bold">5.500 Coins <span class="bonus-tag">+500</span></h3>
+                                <p class="text-gray-400 text-xs">Bonus 500 coins</p>
+                            </div>
+                        </div>
+                        <div class="text-2xl font-bold mb-1 text-white">Rp<span>5.000</span></div>
+                        <p class="text-green-400 text-xs mb-4 font-semibold">🎁 Bonus 500 Coins gratis!</p>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition text-sm" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20top-up%205.500%20Coins%20seharga%20Rp5.000', '_blank')">
+                            <i class="fas fa-shopping-cart mr-1"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <!-- Rp10.000 -->
+                    <div class="store-item coins-item-bonus p-5 rounded-xl relative">
+                        <div class="popular-badge" style="background:#3b82f6;">POPULER</div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="fas fa-coins text-yellow-400 text-2xl"></i>
+                            <div>
+                                <h3 class="text-lg font-bold">12.000 Coins <span class="bonus-tag">+2.000</span></h3>
+                                <p class="text-gray-400 text-xs">Bonus 2.000 coins</p>
+                            </div>
+                        </div>
+                        <div class="text-2xl font-bold mb-1 text-white">Rp<span>10.000</span></div>
+                        <p class="text-green-400 text-xs mb-4 font-semibold">🎁 Bonus 2.000 Coins gratis!</p>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition text-sm" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20top-up%2012.000%20Coins%20seharga%20Rp10.000', '_blank')">
+                            <i class="fas fa-shopping-cart mr-1"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <!-- Rp25.000 -->
+                    <div class="store-item coins-item-bonus p-5 rounded-xl relative">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="fas fa-coins text-yellow-400 text-2xl"></i>
+                            <div>
+                                <h3 class="text-lg font-bold">30.000 Coins <span class="bonus-tag">+5.000</span></h3>
+                                <p class="text-gray-400 text-xs">Bonus 5.000 coins</p>
+                            </div>
+                        </div>
+                        <div class="text-2xl font-bold mb-1 text-white">Rp<span>25.000</span></div>
+                        <p class="text-green-400 text-xs mb-4 font-semibold">🎁 Bonus 5.000 Coins gratis!</p>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition text-sm" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20top-up%2030.000%20Coins%20seharga%20Rp25.000', '_blank')">
+                            <i class="fas fa-shopping-cart mr-1"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <!-- Rp50.000 -->
+                    <div class="store-item coins-item-bonus p-5 rounded-xl relative">
+                        <div class="popular-badge" style="background:linear-gradient(90deg,#f59e0b,#d97706);">BEST VALUE</div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="fas fa-coins text-yellow-400 text-2xl"></i>
+                            <div>
+                                <h3 class="text-lg font-bold">65.000 Coins <span class="bonus-tag">+15.000</span></h3>
+                                <p class="text-gray-400 text-xs">Bonus 15.000 coins</p>
+                            </div>
+                        </div>
+                        <div class="text-2xl font-bold mb-1 text-white">Rp<span>50.000</span></div>
+                        <p class="text-green-400 text-xs mb-4 font-semibold">🎁 Bonus 15.000 Coins gratis!</p>
+                        <button class="w-full bg-amber-500 hover:bg-amber-600 text-white py-2 rounded-lg font-semibold transition text-sm" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20top-up%2065.000%20Coins%20seharga%20Rp50.000', '_blank')">
+                            <i class="fas fa-shopping-cart mr-1"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <!-- Rp100.000 -->
+                    <div class="store-item coins-item-bonus p-5 rounded-xl relative" style="border-color: rgba(251,191,36,0.6);">
+                        <div class="popular-badge" style="background:linear-gradient(90deg,#39ff14,#16a34a);">ULTIMATE</div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="fas fa-coins text-yellow-400 text-2xl"></i>
+                            <div>
+                                <h3 class="text-lg font-bold">140.000 Coins <span class="bonus-tag">+40.000</span></h3>
+                                <p class="text-gray-400 text-xs">Bonus 40.000 coins</p>
+                            </div>
+                        </div>
+                        <div class="text-2xl font-bold mb-1 text-white">Rp<span>100.000</span></div>
+                        <p class="text-green-400 text-xs mb-4 font-semibold">🎁 Bonus 40.000 Coins gratis!</p>
+                        <button class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-semibold transition text-sm" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20top-up%20140.000%20Coins%20seharga%20Rp100.000', '_blank')">
+                            <i class="fas fa-shopping-cart mr-1"></i> Buy Now
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Info box -->
+                <div class="mt-8 server-card p-5 rounded-xl flex gap-4 items-start">
+                    <i class="fas fa-info-circle text-cyan-400 text-xl mt-1"></i>
+                    <div>
+                        <h4 class="font-semibold text-cyan-300 mb-1">Cara menggunakan Coins</h4>
+                        <p class="text-gray-400 text-sm">Coins bisa digunakan untuk membeli Rank permanen di server. Kunjungi tab <strong class="text-white">👑 Ranks</strong> untuk melihat daftar rank yang tersedia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══════════════════ RANKS TAB ═══════════════════ -->
+            <div id="ranks-tab" class="store-tab-content hidden">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-semibold mb-2">👑 Rank Permanen</h3>
+                    <p class="text-gray-400 text-sm">Dibeli menggunakan <span class="text-yellow-400 font-semibold">Coins</span> • Setiap rank sudah termasuk Kit & Prefix keren!</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-5">
 
                     <!-- VIP -->
-                    <div class="store-item rank-vip p-6 rounded-xl relative">
-                        <h3 class="text-xl font-bold mb-1" style="color:#FFD700;">VIP</h3>
-                        <div class="pts-badge mb-2">6.000 Points</div>
-                        <p class="text-gray-400 mb-3 text-sm">Rank pertama dengan fitur dasar premium</p>
-                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>5.000</span></div>
-                        <div class="flex space-x-2 mb-2">
-                            <button class="flex-1 bg-yellow-600 hover:bg-yellow-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20VIP%20Rank%20seharga%20Rp5.000', '_blank')">
-                                <i class="fas fa-shopping-cart mr-2"></i> Buy Now
+                    <div class="store-item rank-vip p-5 rounded-xl relative">
+                        <div class="coins-badge mb-2">10.000 Coins</div>
+                        <p class="text-gray-500 text-xs mb-0.5">≈ Rp10.000</p>
+                        <h3 class="text-xl font-bold mb-1" style="color:#FFD700;">⭐ VIP</h3>
+                        <p class="text-gray-400 text-sm mb-3">Kit VIP + Prefix eksklusif</p>
+                        <div class="bg-black/20 rounded-lg p-3 mb-4 text-sm text-gray-300">
+                            <div class="flex items-center gap-2 mb-1"><i class="fas fa-check text-green-400 text-xs"></i> <code class="text-cyan-300">/anvil</code> — buka anvil di mana saja</div>
+                            <div class="flex items-center gap-2"><i class="fas fa-check text-green-400 text-xs"></i> <code class="text-cyan-300">/feed</code> — kenyang instan</div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-yellow-600 hover:bg-yellow-700 text-white py-2 rounded-lg font-semibold transition text-sm" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20Rank%20VIP%20(10.000%20Coins)', '_blank')">
+                                <i class="fas fa-shopping-cart mr-1"></i> Beli
                             </button>
-                            <button class="flex-1 bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-lg font-semibold transition benefit-btn" data-rank="vip">
-                                <i class="fas fa-info-circle mr-2"></i> Info
+                            <button class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-3 rounded-lg transition text-sm benefit-btn" data-rank="vip">
+                                <i class="fas fa-info-circle"></i>
                             </button>
                         </div>
                     </div>
 
                     <!-- VIP+ -->
-                    <div class="store-item rank-vip-plus p-6 rounded-xl relative">
-                        <div class="popular-badge">POPULER</div>
-                        <h3 class="text-xl font-bold mb-1" style="color:#FFA500;">VIP+</h3>
-                        <div class="pts-badge mb-2" style="background:rgba(255,165,0,0.15);color:#FFA500;border-color:rgba(255,165,0,0.3);">12.000 Points</div>
-                        <p class="text-gray-400 mb-3 text-sm">Fitur kumulatif VIP + E-Chest, Color Nick</p>
-                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>10.000</span></div>
-                        <div class="flex space-x-2 mb-2">
-                            <button class="flex-1 bg-orange-600 hover:bg-orange-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20VIP%2B%20Rank%20seharga%20Rp10.000', '_blank')">
-                                <i class="fas fa-shopping-cart mr-2"></i> Buy Now
+                    <div class="store-item rank-vip-plus p-5 rounded-xl relative">
+                        <div class="popular-badge" style="background:#ef4444;">POPULER</div>
+                        <div class="coins-badge mb-2" style="color:#FFA500;background:rgba(255,165,0,0.15);border-color:rgba(255,165,0,0.35);">18.000 Coins</div>
+                        <p class="text-gray-500 text-xs mb-0.5">≈ Rp18.000</p>
+                        <h3 class="text-xl font-bold mb-1" style="color:#FFA500;">⭐ VIP+</h3>
+                        <p class="text-gray-400 text-sm mb-3">Kit VIP+ + Prefix eksklusif</p>
+                        <div class="bg-black/20 rounded-lg p-3 mb-4 text-sm text-gray-300">
+                            <div class="flex items-center gap-2 mb-1"><i class="fas fa-check text-green-400 text-xs"></i> Slot Enderchest bertambah</div>
+                            <div class="flex items-center gap-2"><i class="fas fa-check text-green-400 text-xs"></i> Color Nickname</div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-orange-600 hover:bg-orange-700 text-white py-2 rounded-lg font-semibold transition text-sm" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20Rank%20VIP%2B%20(18.000%20Coins)', '_blank')">
+                                <i class="fas fa-shopping-cart mr-1"></i> Beli
                             </button>
-                            <button class="flex-1 bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-lg font-semibold transition benefit-btn" data-rank="vip_plus">
-                                <i class="fas fa-info-circle mr-2"></i> Info
+                            <button class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-3 rounded-lg transition text-sm benefit-btn" data-rank="vip_plus">
+                                <i class="fas fa-info-circle"></i>
                             </button>
                         </div>
                     </div>
 
-                    <!-- Mega VIP -->
-                    <div class="store-item rank-mega-vip p-6 rounded-xl relative">
-                        <h3 class="text-xl font-bold mb-1" style="color:#9370DB;">Mega VIP</h3>
-                        <div class="pts-badge mb-2" style="background:rgba(147,112,219,0.15);color:#9370DB;border-color:rgba(147,112,219,0.3);">25.000 Points</div>
-                        <p class="text-gray-400 mb-3 text-sm">FLY, /repair all + semua fitur sebelumnya</p>
-                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>21.000</span></div>
-                        <div class="flex space-x-2 mb-2">
-                            <button class="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20Mega%20VIP%20Rank%20seharga%20Rp21.000', '_blank')">
-                                <i class="fas fa-shopping-cart mr-2"></i> Buy Now
+                    <!-- MEGA VIP -->
+                    <div class="store-item rank-mega-vip p-5 rounded-xl relative">
+                        <div class="coins-badge mb-2" style="color:#9370DB;background:rgba(147,112,219,0.15);border-color:rgba(147,112,219,0.35);">25.000 Coins</div>
+                        <p class="text-gray-500 text-xs mb-0.5">≈ Rp25.000</p>
+                        <h3 class="text-xl font-bold mb-1" style="color:#9370DB;">🔮 Mega VIP</h3>
+                        <p class="text-gray-400 text-sm mb-3">Kit Mega + Prefix eksklusif</p>
+                        <div class="bg-black/20 rounded-lg p-3 mb-4 text-sm text-gray-300">
+                            <div class="flex items-center gap-2 mb-1"><i class="fas fa-check text-green-400 text-xs"></i> FLY — terbang bebas</div>
+                            <div class="flex items-center gap-2"><i class="fas fa-check text-green-400 text-xs"></i> <code class="text-cyan-300">/repair all</code> — perbaiki item</div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-semibold transition text-sm" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20Rank%20Mega%20VIP%20(25.000%20Coins)', '_blank')">
+                                <i class="fas fa-shopping-cart mr-1"></i> Beli
                             </button>
-                            <button class="flex-1 bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-lg font-semibold transition benefit-btn" data-rank="mega_vip">
-                                <i class="fas fa-info-circle mr-2"></i> Info
+                            <button class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-3 rounded-lg transition text-sm benefit-btn" data-rank="mega_vip">
+                                <i class="fas fa-info-circle"></i>
                             </button>
                         </div>
                     </div>
 
-                    <!-- Ultra VIP -->
-                    <div class="store-item rank-ultra-vip p-6 rounded-xl relative">
-                        <h3 class="text-xl font-bold mb-1" style="color:#54DAF4;">Ultra VIP</h3>
-                        <div class="pts-badge mb-2" style="background:rgba(84,218,244,0.15);color:#54DAF4;border-color:rgba(84,218,244,0.3);">45.000 Points</div>
-                        <p class="text-gray-400 mb-3 text-sm">25 SetHome, Kit Ultra + semua fitur sebelumnya</p>
-                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>37.500</span></div>
-                        <div class="flex space-x-2 mb-2">
-                            <button class="flex-1 bg-cyan-600 hover:bg-cyan-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20Ultra%20VIP%20Rank%20seharga%20Rp37.500', '_blank')">
-                                <i class="fas fa-shopping-cart mr-2"></i> Buy Now
+                    <!-- ULTRA VIP -->
+                    <div class="store-item rank-ultra-vip p-5 rounded-xl relative">
+                        <div class="coins-badge mb-2" style="color:#54DAF4;background:rgba(84,218,244,0.15);border-color:rgba(84,218,244,0.35);">45.000 Coins</div>
+                        <p class="text-gray-500 text-xs mb-0.5">≈ Rp45.000</p>
+                        <h3 class="text-xl font-bold mb-1" style="color:#54DAF4;">💎 Ultra VIP</h3>
+                        <p class="text-gray-400 text-sm mb-3">Kit Ultra + Prefix eksklusif</p>
+                        <div class="bg-black/20 rounded-lg p-3 mb-4 text-sm text-gray-300">
+                            <div class="flex items-center gap-2"><i class="fas fa-check text-green-400 text-xs"></i> Hingga 25 SetHome</div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-cyan-600 hover:bg-cyan-700 text-white py-2 rounded-lg font-semibold transition text-sm" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20Rank%20Ultra%20VIP%20(45.000%20Coins)', '_blank')">
+                                <i class="fas fa-shopping-cart mr-1"></i> Beli
                             </button>
-                            <button class="flex-1 bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-lg font-semibold transition benefit-btn" data-rank="ultra_vip">
-                                <i class="fas fa-info-circle mr-2"></i> Info
+                            <button class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-3 rounded-lg transition text-sm benefit-btn" data-rank="ultra_vip">
+                                <i class="fas fa-info-circle"></i>
                             </button>
                         </div>
                     </div>
 
-                    <!-- Legend -->
-                    <div class="store-item rank-legend p-6 rounded-xl relative">
-                        <h3 class="text-xl font-bold mb-1" style="color:#FF4500;">Legend</h3>
-                        <div class="pts-badge mb-2" style="background:rgba(255,69,0,0.15);color:#FF4500;border-color:rgba(255,69,0,0.3);">75.000 Points</div>
-                        <p class="text-gray-400 mb-3 text-sm">/heal, Kit Legend + semua fitur sebelumnya</p>
-                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>62.500</span></div>
-                        <div class="flex space-x-2 mb-2">
-                            <button class="flex-1 bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20Legend%20Rank%20seharga%20Rp62.500', '_blank')">
-                                <i class="fas fa-shopping-cart mr-2"></i> Buy Now
+                    <!-- LEGEND -->
+                    <div class="store-item rank-legend p-5 rounded-xl relative">
+                        <div class="coins-badge mb-2" style="color:#FF6347;background:rgba(255,69,0,0.15);border-color:rgba(255,69,0,0.35);">65.000 Coins</div>
+                        <p class="text-gray-500 text-xs mb-0.5">≈ Rp65.000</p>
+                        <h3 class="text-xl font-bold mb-1" style="color:#FF6347;">🔥 Legend</h3>
+                        <p class="text-gray-400 text-sm mb-3">Kit Legend + Prefix eksklusif</p>
+                        <div class="bg-black/20 rounded-lg p-3 mb-4 text-sm text-gray-300">
+                            <div class="flex items-center gap-2"><i class="fas fa-check text-green-400 text-xs"></i> <code class="text-cyan-300">/heal</code> — isi darah penuh seketika</div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg font-semibold transition text-sm" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20Rank%20Legend%20(65.000%20Coins)', '_blank')">
+                                <i class="fas fa-shopping-cart mr-1"></i> Beli
                             </button>
-                            <button class="flex-1 bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-lg font-semibold transition benefit-btn" data-rank="legend">
-                                <i class="fas fa-info-circle mr-2"></i> Info
+                            <button class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-3 rounded-lg transition text-sm benefit-btn" data-rank="legend">
+                                <i class="fas fa-info-circle"></i>
                             </button>
                         </div>
                     </div>
 
-                    <!-- Hero -->
-                    <div class="store-item rank-hero p-6 rounded-xl relative">
-                        <div class="popular-badge" style="background: linear-gradient(90deg,#39ff14,#00cc00);">TOP RANK</div>
-                        <h3 class="text-xl font-bold mb-1" style="color:#39FF14;">Hero</h3>
-                        <div class="pts-badge mb-2" style="background:rgba(57,255,20,0.15);color:#39FF14;border-color:rgba(57,255,20,0.3);">120.000 Points</div>
-                        <p class="text-gray-400 mb-3 text-sm">SERVER PASS, Kit Hero + semua fitur sebelumnya</p>
-                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>100.000</span></div>
-                        <div class="flex space-x-2 mb-2">
-                            <button class="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20Hero%20Rank%20seharga%20Rp100.000', '_blank')">
-                                <i class="fas fa-shopping-cart mr-2"></i> Buy Now
+                    <!-- HERO -->
+                    <div class="store-item rank-hero p-5 rounded-xl relative">
+                        <div class="popular-badge" style="background:linear-gradient(90deg,#39ff14,#16a34a);">ULTIMATE</div>
+                        <div class="coins-badge mb-2" style="color:#39FF14;background:rgba(57,255,20,0.15);border-color:rgba(57,255,20,0.4);">100.000 Coins</div>
+                        <p class="text-gray-500 text-xs mb-0.5">≈ Rp100.000</p>
+                        <h3 class="text-xl font-bold mb-1" style="color:#39FF14;">👑 Hero</h3>
+                        <p class="text-gray-400 text-sm mb-3">Kit Hero + Prefix eksklusif</p>
+                        <div class="bg-black/20 rounded-lg p-3 mb-4 text-sm text-gray-300">
+                            <div class="flex items-center gap-2 mb-1"><i class="fas fa-check text-green-400 text-xs"></i> UNLOCK ALL COSMETICS</div>
+                            <div class="flex items-center gap-2"><i class="fas fa-check text-green-400 text-xs"></i> SERVER PASS — masuk server saat full</div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-semibold transition text-sm" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20Rank%20Hero%20(100.000%20Coins)', '_blank')">
+                                <i class="fas fa-shopping-cart mr-1"></i> Beli
                             </button>
-                            <button class="flex-1 bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-lg font-semibold transition benefit-btn" data-rank="hero">
-                                <i class="fas fa-info-circle mr-2"></i> Info
+                            <button class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-3 rounded-lg transition text-sm benefit-btn" data-rank="hero">
+                                <i class="fas fa-info-circle"></i>
                             </button>
                         </div>
                     </div>
 
                 </div>
-            </div>
 
-            <!-- Coins Tab -->
-            <!-- Harga: Rp 1.200 per 1.000 coins -->
-            <div id="coins-tab" class="store-tab-content hidden">
-                <h3 class="text-2xl font-semibold mb-2 text-center">Server Coins</h3>
-                <p class="text-center text-gray-400 mb-8">Harga: <span class="text-cyan-400 font-bold">Rp 1.200</span> per 1.000 Coins</p>
-                <div class="grid md:grid-cols-3 gap-6">
-
-                    <!-- 5.000 Coins = Rp6.000 -->
-                    <div class="store-item coins-item p-6 rounded-xl relative">
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-coins text-yellow-400 text-3xl mr-3"></i>
-                            <h3 class="text-xl font-bold">5.000 Coins</h3>
-                        </div>
-                        <p class="text-gray-400 mb-4">Paket starter</p>
-                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>6.000</span></div>
-                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%205.000%20Coins%20seharga%20Rp6.000', '_blank')">
-                            <i class="fas fa-shopping-cart mr-2"></i> Buy Now
-                        </button>
+                <!-- Rank progression table -->
+                <div class="mt-8 server-card p-6 rounded-xl">
+                    <h4 class="text-lg font-semibold mb-4 text-center gradient-text">📊 Tabel Perbandingan Rank</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="text-gray-400 border-b border-gray-700">
+                                    <th class="text-left py-2 pr-4">Rank</th>
+                                    <th class="text-center py-2 px-3">Harga Coins</th>
+                                    <th class="text-center py-2 px-3">FLY</th>
+                                    <th class="text-center py-2 px-3">/heal</th>
+                                    <th class="text-center py-2 px-3">SetHome</th>
+                                    <th class="text-left py-2 pl-3">Fitur Utama</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-800">
+                                <tr><td class="py-2 pr-4 font-bold" style="color:#FFD700;">VIP</td><td class="text-center text-yellow-400">10.000</td><td class="text-center text-red-400">✗</td><td class="text-center text-red-400">✗</td><td class="text-center">3</td><td class="text-gray-400 pl-3">/anvil, /feed</td></tr>
+                                <tr><td class="py-2 pr-4 font-bold" style="color:#FFA500;">VIP+</td><td class="text-center text-yellow-400">18.000</td><td class="text-center text-red-400">✗</td><td class="text-center text-red-400">✗</td><td class="text-center">5</td><td class="text-gray-400 pl-3">E-Chest, Color Nick</td></tr>
+                                <tr><td class="py-2 pr-4 font-bold" style="color:#9370DB;">Mega VIP</td><td class="text-center text-yellow-400">25.000</td><td class="text-center text-green-400">✓</td><td class="text-center text-red-400">✗</td><td class="text-center">10</td><td class="text-gray-400 pl-3">FLY, /repair all</td></tr>
+                                <tr><td class="py-2 pr-4 font-bold" style="color:#54DAF4;">Ultra VIP</td><td class="text-center text-yellow-400">45.000</td><td class="text-center text-green-400">✓</td><td class="text-center text-red-400">✗</td><td class="text-center">25</td><td class="text-gray-400 pl-3">25 SetHome</td></tr>
+                                <tr><td class="py-2 pr-4 font-bold" style="color:#FF6347;">Legend</td><td class="text-center text-yellow-400">65.000</td><td class="text-center text-green-400">✓</td><td class="text-center text-green-400">✓</td><td class="text-center">25</td><td class="text-gray-400 pl-3">/heal</td></tr>
+                                <tr><td class="py-2 pr-4 font-bold" style="color:#39FF14;">Hero</td><td class="text-center text-yellow-400">100.000</td><td class="text-center text-green-400">✓</td><td class="text-center text-green-400">✓</td><td class="text-center">∞</td><td class="text-gray-400 pl-3">All Cosmetics, Server Pass</td></tr>
+                            </tbody>
+                        </table>
                     </div>
-
-                    <!-- 10.000 Coins = Rp12.000 -->
-                    <div class="store-item coins-item p-6 rounded-xl relative">
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-coins text-yellow-400 text-3xl mr-3"></i>
-                            <h3 class="text-xl font-bold">10.000 Coins</h3>
-                        </div>
-                        <p class="text-gray-400 mb-4">Paket pemula</p>
-                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>12.000</span></div>
-                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%2010.000%20Coins%20seharga%20Rp12.000', '_blank')">
-                            <i class="fas fa-shopping-cart mr-2"></i> Buy Now
-                        </button>
-                    </div>
-
-                    <!-- 25.000 Coins = Rp30.000 -->
-                    <div class="store-item coins-item p-6 rounded-xl relative">
-                        <div class="popular-badge">POPULER</div>
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-coins text-yellow-400 text-3xl mr-3"></i>
-                            <h3 class="text-xl font-bold">25.000 Coins</h3>
-                        </div>
-                        <p class="text-gray-400 mb-4">Nilai terbaik untuk pemula</p>
-                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>30.000</span></div>
-                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%2025.000%20Coins%20seharga%20Rp30.000', '_blank')">
-                            <i class="fas fa-shopping-cart mr-2"></i> Buy Now
-                        </button>
-                    </div>
-
-                    <!-- 50.000 Coins = Rp60.000 -->
-                    <div class="store-item coins-item p-6 rounded-xl relative">
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-coins text-yellow-400 text-3xl mr-3"></i>
-                            <h3 class="text-xl font-bold">50.000 Coins</h3>
-                        </div>
-                        <p class="text-gray-400 mb-4">Paket menengah</p>
-                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>60.000</span></div>
-                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%2050.000%20Coins%20seharga%20Rp60.000', '_blank')">
-                            <i class="fas fa-shopping-cart mr-2"></i> Buy Now
-                        </button>
-                    </div>
-
-                    <!-- 100.000 Coins = Rp120.000 -->
-                    <div class="store-item coins-item p-6 rounded-xl relative">
-                        <div class="popular-badge" style="background:#f59e0b;">BEST VALUE</div>
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-coins text-yellow-400 text-3xl mr-3"></i>
-                            <h3 class="text-xl font-bold">100.000 Coins</h3>
-                        </div>
-                        <p class="text-gray-400 mb-4">Untuk pemain serius</p>
-                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>120.000</span></div>
-                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20100.000%20Coins%20seharga%20Rp120.000', '_blank')">
-                            <i class="fas fa-shopping-cart mr-2"></i> Buy Now
-                        </button>
-                    </div>
-
-                    <!-- 250.000 Coins = Rp300.000 -->
-                    <div class="store-item coins-item p-6 rounded-xl relative">
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-coins text-yellow-400 text-3xl mr-3"></i>
-                            <h3 class="text-xl font-bold">250.000 Coins</h3>
-                        </div>
-                        <p class="text-gray-400 mb-4">Paket ultimate</p>
-                        <div class="text-2xl font-bold mb-4 text-white">Rp<span>300.000</span></div>
-                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition" onclick="window.open('https://wa.me/6281234973544?text=Saya%20ingin%20membeli%20250.000%20Coins%20seharga%20Rp300.000', '_blank')">
-                            <i class="fas fa-shopping-cart mr-2"></i> Buy Now
-                        </button>
-                    </div>
-
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -272,17 +359,17 @@
     <div class="modal" id="benefitModal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeBenefitModal()">&times;</span>
-            <h3 class="text-2xl font-bold mb-1" id="benefitModalTitle">Rank Benefits</h3>
-            <div class="pts-badge mb-4" id="modalPtsBadge"></div>
+            <h3 class="text-xl font-bold mb-1" id="benefitModalTitle">Rank Benefits</h3>
+            <div class="coins-badge mb-4" id="modalCoinsBadge"></div>
             <div class="mb-4">
-                <h4 class="text-lg font-semibold mb-2 text-blue-400">✨ Fitur Utama (Kumulatif):</h4>
+                <p class="section-label">✨ Fitur Utama (Kumulatif)</p>
                 <div class="features-grid" id="featuresGrid"></div>
             </div>
-            <div class="bg-gray-800 p-4 rounded-lg mb-6">
-                <h4 class="text-lg font-semibold mb-2 text-yellow-400">💰 Harga:</h4>
-                <p class="text-gray-300" id="bonusContent"></p>
+            <div class="bg-gray-800/60 p-4 rounded-lg mb-5 border border-gray-700">
+                <p class="section-label mb-2">💡 Catatan</p>
+                <p class="text-gray-300 text-sm" id="bonusContent"></p>
             </div>
-            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition" onclick="closeBenefitModal()">
+            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg font-semibold transition" onclick="closeBenefitModal()">
                 <i class="fas fa-check mr-2"></i> Mengerti!
             </button>
         </div>
@@ -297,46 +384,46 @@
     <script>
         const rankData = {
             'vip': {
-                title: 'VIP',
-                points: '6.000 Points',
+                title: '⭐ VIP',
+                coins: '10.000 Coins',
                 color: '#FFD700',
-                features: ['/anvil', '/feed', 'Kit VIP'],
-                price: 'Rp 5.000'
+                features: ['/anvil', '/feed', 'Kit VIP', '3 SetHome'],
+                note: 'Rank pertama yang memberikan akses fitur premium dasar. Semua fitur bersifat kumulatif ke rank berikutnya.'
             },
             'vip_plus': {
-                title: 'VIP+',
-                points: '12.000 Points',
+                title: '⭐ VIP+',
+                coins: '18.000 Coins',
                 color: '#FFA500',
-                features: ['/anvil', '/feed', 'Kit VIP', 'E-Chest', 'Color Nick', 'Kit VIP+'],
-                price: 'Rp 10.000'
+                features: ['/anvil', '/feed', 'Kit VIP+', '5 SetHome', 'E-Chest (slot ekstra)', 'Color Nickname'],
+                note: 'Mencakup semua fitur VIP ditambah E-Chest dan kemampuan mewarnai nama.'
             },
             'mega_vip': {
-                title: 'Mega VIP',
-                points: '25.000 Points',
+                title: '🔮 Mega VIP',
+                coins: '25.000 Coins',
                 color: '#9370DB',
-                features: ['/anvil', '/feed', 'E-Chest', 'Color Nick', 'FLY', '/repair all', 'Kit Mega'],
-                price: 'Rp 21.000'
+                features: ['/anvil', '/feed', 'E-Chest', 'Color Nick', 'Kit Mega', '10 SetHome', 'FLY 🚀', '/repair all'],
+                note: 'Dapatkan kemampuan terbang dan memperbaiki semua item sekaligus!'
             },
             'ultra_vip': {
-                title: 'Ultra VIP',
-                points: '45.000 Points',
+                title: '💎 Ultra VIP',
+                coins: '45.000 Coins',
                 color: '#54DAF4',
-                features: ['/anvil', '/feed', 'E-Chest', 'Color Nick', 'FLY', '/repair all', '25 SetHome', 'Kit Ultra'],
-                price: 'Rp 37.500'
+                features: ['/anvil', '/feed', 'E-Chest', 'Color Nick', 'FLY', '/repair all', 'Kit Ultra', '25 SetHome'],
+                note: 'SetHome hingga 25 lokasi berbeda untuk mobilitas maksimal.'
             },
             'legend': {
-                title: 'Legend',
-                points: '75.000 Points',
-                color: '#FF4500',
+                title: '🔥 Legend',
+                coins: '65.000 Coins',
+                color: '#FF6347',
                 features: ['/anvil', '/feed', 'E-Chest', 'Color Nick', 'FLY', '/repair all', '25 SetHome', '/heal', 'Kit Legend'],
-                price: 'Rp 62.500'
+                note: 'Isi darah penuh seketika dengan /heal kapan saja kamu butuhkan!'
             },
             'hero': {
-                title: 'Hero',
-                points: '120.000 Points',
+                title: '👑 Hero',
+                coins: '100.000 Coins',
                 color: '#39FF14',
-                features: ['/anvil', '/feed', 'E-Chest', 'Color Nick', 'FLY', '/repair all', '25 SetHome', '/heal', 'SERVER PASS', 'Kit Hero'],
-                price: 'Rp 100.000'
+                features: ['/anvil', '/feed', 'E-Chest', 'Color Nick', 'FLY', '/repair all', '25 SetHome', '/heal', 'UNLOCK ALL COSMETICS', 'SERVER PASS', 'Kit Hero'],
+                note: 'Rank tertinggi! Unlock semua kosmetik dan tetap bisa masuk server bahkan saat penuh.'
             }
         };
 
@@ -345,33 +432,30 @@
                 document.querySelectorAll('.store-tab').forEach(t => t.classList.remove('active'));
                 this.classList.add('active');
                 document.querySelectorAll('.store-tab-content').forEach(c => c.classList.add('hidden'));
-                const tabId = this.getAttribute('data-tab') + '-tab';
-                document.getElementById(tabId).classList.remove('hidden');
+                document.getElementById(this.getAttribute('data-tab') + '-tab').classList.remove('hidden');
             });
         });
 
         document.querySelectorAll('.benefit-btn').forEach(btn => {
             btn.addEventListener('click', function() {
-                const rank = this.getAttribute('data-rank');
-                const data = rankData[rank];
+                const data = rankData[this.getAttribute('data-rank')];
                 if (!data) return;
-
-                document.getElementById('benefitModalTitle').textContent = data.title + ' Rank Benefits';
+                document.getElementById('benefitModalTitle').textContent = data.title + ' — Benefits';
                 document.getElementById('benefitModalTitle').style.color = data.color;
-                const ptsBadge = document.getElementById('modalPtsBadge');
-                ptsBadge.textContent = data.points;
-                ptsBadge.style.color = data.color;
-
+                const badge = document.getElementById('modalCoinsBadge');
+                badge.textContent = data.coins;
+                badge.style.color = data.color;
+                badge.style.background = data.color + '22';
+                badge.style.borderColor = data.color + '55';
                 const grid = document.getElementById('featuresGrid');
                 grid.innerHTML = '';
                 data.features.forEach(f => {
                     const el = document.createElement('div');
                     el.className = 'feature-item';
-                    el.innerHTML = `<i class="fas fa-check text-green-400 mr-2"></i>${f}`;
+                    el.innerHTML = `<i class="fas fa-check" style="color:#4ade80;font-size:10px;flex-shrink:0;"></i>${f}`;
                     grid.appendChild(el);
                 });
-
-                document.getElementById('bonusContent').textContent = data.price + ' (atau ' + data.points + ')';
+                document.getElementById('bonusContent').textContent = data.note;
                 document.getElementById('benefitModal').style.display = 'flex';
             });
         });
@@ -379,10 +463,7 @@
         function closeBenefitModal() {
             document.getElementById('benefitModal').style.display = 'none';
         }
-
-        window.onclick = function(event) {
-            if (event.target == document.getElementById('benefitModal')) closeBenefitModal();
-        };
+        window.onclick = e => { if (e.target == document.getElementById('benefitModal')) closeBenefitModal(); };
     </script>
 </body>
 </html>
